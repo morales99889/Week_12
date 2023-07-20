@@ -24,7 +24,7 @@ class TestDemoJUnitTest {
 	}
 
 	@ParameterizedTest
-	@MethodSource("TestDemoJUnitTest#argumentsForAddPositive")
+	@MethodSource("com.promineotech.TestDemoJUnitTest#argumentsForAddPositive")
 	public void assertThatTwoPositiveNumbersAreAddedCorrectly(int a, int b, int expected, boolean expectException) {
 		if (!expectException) {
 			assertThat(testDemo.addPositive(a, b)).isEqualTo(expected);
@@ -56,6 +56,11 @@ class TestDemoJUnitTest {
 		
 		assertThat(fiveSquared).isEqualTo(25);
 
+	}	
+	@Test
+	void assertProductOfTwoNumbers() {
+		assertThat(testDemo.multiplyTwoNumbers(3, 3)).isEqualTo(9);
+		assertThat(testDemo.multiplyTwoNumbers(10, 4)).isEqualTo(40);
+		assertThat(testDemo.multiplyTwoNumbers(9, 9)).isEqualTo(81);
 	}
-
 }

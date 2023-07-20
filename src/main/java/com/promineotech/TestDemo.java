@@ -20,4 +20,8 @@ public class TestDemo {
 		Random random = new Random();
 		return random.nextInt(10)+1;
 	}
+	
+	public int multiplyTwoNumbers (int c, int d) {
+		return c * d;
+	}
 }
